@@ -1,14 +1,25 @@
 package com.example.gogamegreen.fragmentclass;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.example.gogamegreen.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +27,9 @@ import com.example.gogamegreen.R;
  * create an instance of this fragment.
  */
 public class home extends Fragment {
+
+    CardView viewbill,tipscard;
+    ViewPager pager;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,7 +74,77 @@ public class home extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        pager = view.findViewById(R.id.viewpager);
+
+        Bundle bundle = getArguments();
+
+
+        // ImageView infobtn = (ImageView) view.findViewById(R.id.ibutton);
+
+        List<Integer> imagelist = new ArrayList<>();
+        imagelist.add(R.drawable.slide2);
+        imagelist.add(R.drawable.slide1);
+        imagelist.add(R.drawable.solar);
+        imagelist.add(R.drawable.billcalci);
+
+//        SliderAdapter imageAdapter = new SliderAdapter(imagelist);
+//        pager.setAdapter(imageAdapter);
+
+        LinearLayout gameview = (LinearLayout) view.findViewById(R.id.gamelayout);
+
+        gameview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                Fragment game = new gamezone();
+                ft.replace(R.id.fragment,game);
+                ft.commit();
+            }
+        });
+//        LinearLayout billcalculatorlayout = (LinearLayout) view.findViewById(R.id.billcalculatorlayout);
+//        billcalculatorlayout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                /* to replace a fragment with a fragment */
+//                AppCompatActivity activity = (AppCompatActivity) v.getContext();
+//                Fragment billcalculatingfragment = new billcalculator();
+//                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment, billcalculatingfragment).addToBackStack(null).commit();
+//            }
+//        });
+
+//        ImageView ibutton = (ImageView) view.findViewById(R.id.ibutton);
+//        ibutton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(getContext(), i_btninfo.class);
+//                startActivity(i);
+//            }
+//        });
+
+//        viewbill = (CardView) view.findViewById(R.id.viewbill);
+//        viewbill.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(getContext(), checkyourbill.class);
+//                startActivity(i);
+//            }
+//        });
+
+//        tipscard = (CardView) view.findViewById(R.id.tips);
+//        tipscard.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(getContext(), billtips.class);
+//                i.putExtra("bundle", bundle);
+//                startActivity(i);
+//            }
+//        });
+
+        return view;
     }
 }
