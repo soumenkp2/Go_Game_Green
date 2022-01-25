@@ -3,7 +3,6 @@ package com.example.gogamegreen.fragmentclass;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -13,10 +12,10 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.gogamegreen.R;
+import com.example.gogamegreen.image_recog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -126,14 +125,17 @@ public class home extends Fragment {
 //            }
 //        });
 
-//        viewbill = (CardView) view.findViewById(R.id.viewbill);
-//        viewbill.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(getContext(), checkyourbill.class);
-//                startActivity(i);
-//            }
-//        });
+
+       viewbill = (CardView) view.findViewById(R.id.viewbill);
+       viewbill.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent i = new Intent(getContext(), image_recog.class);
+               startActivity(i);
+
+           }
+    });
+
 
 //        tipscard = (CardView) view.findViewById(R.id.tips);
 //        tipscard.setOnClickListener(new View.OnClickListener() {
