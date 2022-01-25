@@ -23,6 +23,8 @@ import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 
 class image_recog : AppCompatActivity() {
 
+
+
     lateinit var select_image_button : Button
     lateinit var make_prediction : Button
     lateinit var img_view : ImageView
@@ -98,7 +100,20 @@ class image_recog : AppCompatActivity() {
 
             var max = getMax(outputFeature0.floatArray)
 
-            text_view.setText(labels[max])
+            if(labels[max].equals("envelope"))
+            {
+                text_view.setText(labels[max] + ", It contributes in producing 51% of CO2 ")
+            }
+            else if(labels[max].equals("plastic bag"))
+            {
+                text_view.setText(labels[max] + ", It contributes in producing 43% of CO2 ")
+
+
+            }
+
+
+
+
 
 // Releases model resources if no longer used.
             model.close()

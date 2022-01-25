@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GoGameGreen">
-        <activity android:name=".image_recog"></activity>
+        <activity android:name=".dinoassist"></activity>
+        <activity android:name=".image_recog" />
         <activity android:name=".activityclass.gogreengame" />
         <activity android:name=".activityclass.funfarm" />
         <activity android:name=".activityclass.splashscreen">

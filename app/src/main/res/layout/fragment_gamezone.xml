@@ -149,6 +149,36 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/dinoassist"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/navyblue"
+                    android:padding="0dp">
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Save Earth"
+                        android:textColor="#046675"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textSize="20sp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/earthcartt"
+                        android:layout_weight="0.9"/>
+                </LinearLayout>
+
+                <LinearLayout
                     android:id="@+id/funfarmcard"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
@@ -156,6 +186,11 @@
                     android:layout_margin="10dp"
                     android:background="@drawable/navyblue"
                     android:padding="0dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/funfarm"
+                        android:layout_weight="0.9"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -169,11 +204,7 @@
                         android:fontFamily="@font/poppins_semibold"
                         android:textSize="20sp"/>
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/funfarm"
-                        android:layout_weight="0.9"/>
+
 
                 </LinearLayout>
 

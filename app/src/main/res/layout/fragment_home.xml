@@ -27,7 +27,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:background="#00A6F3"
+        android:background="#00B8D4"
         android:layout_height="match_parent">
 
         <RelativeLayout
@@ -250,10 +250,11 @@
                                 android:fontFamily="@font/poppins"
                                 android:gravity="center"
                                 android:paddingHorizontal="10dp"
-                                android:text="View Bill"
+                                android:text="Know your object"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 android:textSize="13sp" />
+
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -282,10 +283,11 @@
                                 android:layout_margin="20dp"
                                 android:layout_weight="1"
                                 android:layout_gravity="center"/>
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Tips"
+                                android:text="Design your garden"
                                 android:fontFamily="@font/poppins"
                                 android:textAlignment="center"
                                 android:layout_gravity="center"
@@ -381,6 +383,7 @@
                     android:layout_below="@+id/gridview"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
+                    android:visibility="invisible"
                     android:orientation="horizontal"
                     android:padding="10dp"
                     android:layout_marginStart="40dp"

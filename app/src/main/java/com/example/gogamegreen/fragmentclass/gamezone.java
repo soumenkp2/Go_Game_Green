@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import com.example.gogamegreen.R;
 import com.example.gogamegreen.activityclass.funfarm;
 import com.example.gogamegreen.activityclass.gogreengame;
+import com.example.gogamegreen.dinoassist;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,7 +24,7 @@ import com.example.gogamegreen.activityclass.gogreengame;
  * create an instance of this fragment.
  */
 public class gamezone extends Fragment {
-    LinearLayout gogreen, funfarm;
+    LinearLayout gogreen, funfarm, saveearth;
     ImageView gamezonebackbutton;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -93,6 +94,16 @@ public class gamezone extends Fragment {
                 startActivity(i);
             }
         });
+
+        saveearth = (LinearLayout) view.findViewById(R.id.dinoassist);
+        saveearth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), dinoassist.class);
+                startActivity(i);
+            }
+        });
+
 
         funfarm = (LinearLayout) view.findViewById(R.id.funfarmcard);
         funfarm.setOnClickListener(new View.OnClickListener() {
