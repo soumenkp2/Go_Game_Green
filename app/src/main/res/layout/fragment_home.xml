@@ -259,7 +259,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/tips"
+                        android:id="@+id/design"
                         android:layout_width="80dp"
                         android:layout_height="150dp"
                         android:layout_columnWeight="1"

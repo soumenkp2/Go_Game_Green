@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.example.gogamegreen.R;
+import com.example.gogamegreen.SliderAdapter;
 import com.example.gogamegreen.image_recog;
 
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ import java.util.List;
  */
 public class home extends Fragment {
 
-    CardView viewbill,tipscard;
+    CardView viewbill,designcard;
     ViewPager pager;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -85,13 +86,11 @@ public class home extends Fragment {
         // ImageView infobtn = (ImageView) view.findViewById(R.id.ibutton);
 
         List<Integer> imagelist = new ArrayList<>();
-        imagelist.add(R.drawable.slide2);
-        imagelist.add(R.drawable.slide1);
-        imagelist.add(R.drawable.solar);
-        imagelist.add(R.drawable.billcalci);
+        imagelist.add(R.drawable.waterboy);
+        imagelist.add(R.drawable.tractor);
 
-//        SliderAdapter imageAdapter = new SliderAdapter(imagelist);
-//        pager.setAdapter(imageAdapter);
+        SliderAdapter imageAdapter = new SliderAdapter(imagelist);
+        pager.setAdapter(imageAdapter);
 
         LinearLayout gameview = (LinearLayout) view.findViewById(R.id.gamelayout);
 
@@ -137,8 +136,8 @@ public class home extends Fragment {
     });
 
 
-//        tipscard = (CardView) view.findViewById(R.id.tips);
-//        tipscard.setOnClickListener(new View.OnClickListener() {
+//        designcard = (CardView) view.findViewById(R.id.design);
+//        designcard.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                Intent i = new Intent(getContext(), billtips.class);
